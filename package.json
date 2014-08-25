@@ -1,0 +1,27 @@
+{
+  "name": "lambda-js",
+  "version": "0.0.1",
+  "description": "A simple Lisp interpreter written in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elzair/lambda-js.git"
+  },
+  "keywords": [
+    "lisp",
+    "interpreter"
+  ],
+  "author": "Philip Woods",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/Elzair/lambda-js/issues"
+  },
+  "homepage": "https://github.com/Elzair/lambda-js",
+  "dependencies": {
+    "mathops": "^1.0.0",
+    "simple-list": "0.0.1"
+  }
+}
