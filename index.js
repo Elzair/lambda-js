@@ -11,7 +11,11 @@ var create_env = function(outer, keys, vals) { // An environment: a dict of {'va
     , outer: {value: outer}
     , find: {
         value: function(prop) {
-          return this.properties.hasOwnProperty(prop) ? this.properties : this.outer.find(prop);
+          var self = this;
+          while (!self.properties.hasOwnProperty(prop) && self.outer !== null) {
+            self = self.outer;
+          }
+          return self.properties;
         }
       }
   });
@@ -117,10 +121,11 @@ var atom = function(token) {
 var repl = exports.repl = function(prompt) {
   process.stdout.write(prompt);
   process.stdin.on('data', function(data) {
-    var val = lisp_eval(read(data));
+    var val = lisp_eval(read(data.toString()));
     process.stdout.write('\n\n');
     if (!val) {
-      process.stdout.write(to_s(val));
+      //process.stdout.write(to_s(val));
+      console.log(to_s(val));
     }
     process.stdout.write('\n' + prompt);
   });
