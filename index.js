@@ -7,7 +7,7 @@ var global_env = env.add_globals(env.create_env());
 var lisp_eval = exports.lisp_eval = function(x, env) {  // Evaluate an expression in an environment.
   env = env || global_env;
   var alt, conseq, exp, exps, test, v, val, vs;
-
+    {
   if (typeof x === 'string' && isNaN(x)) {      // variable reference
     console.log('Variable Reference: ' + x);
     console.log(util.format('Env: %j', env.find(x)));
