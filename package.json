@@ -1,6 +1,6 @@
 {
-  "name": "lambda-js",
-  "version": "0.0.1",
+  "name": "jsscheme",
+  "version": "0.0.2",
   "description": "A simple Lisp interpreter written in Javascript",
   "main": "index.js",
   "scripts": {
